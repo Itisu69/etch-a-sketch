@@ -23,9 +23,12 @@ function drawGrid() {
         cell.style.backgroundColor = getRandomColor();
     });
     cell.style.setProperty('--random-opacity', (Math.random() * 0.8 + 0.2).toFixed(2));
-    cell.hideTimeout = setTimeout(() => {
-        cell.style.backgroundColor = "white";
-    }, 1000);
+    
+    while (true) {
+      cell.hideTimeout = setTimeout(() => {
+          cell.style.backgroundColor = "white";
+      }, 1000);
+    }
     div.appendChild(cell);
   }
 
