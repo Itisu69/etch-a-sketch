@@ -25,13 +25,12 @@ function drawGrid() {
     cell.style.setProperty('--random-opacity', (Math.random() * 0.8 + 0.2).toFixed(2));
     
     cell.hideTimeout = setTimeout(() => {
-          cell.style.backgroundColor = "white";
-      }, 1000);
-    
+      cell.style.backgroundColor = "white";
+    }, 1000);
+      
     div.appendChild(cell);
   }
 
 }
-
 //   Drawing grid whenever page loads
 drawGrid();
